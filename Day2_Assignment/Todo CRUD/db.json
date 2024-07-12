@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "task": "Create a HTML file",
+      "status": false
+    },
+    {
+      "id": 3,
+      "task": "Create a react project use Chakra UI",
+      "status": false
+    },
+    {
+      "id": 5,
+      "task": "Create a Javascript file",
+      "status": false
+    }
+  ]
+}
