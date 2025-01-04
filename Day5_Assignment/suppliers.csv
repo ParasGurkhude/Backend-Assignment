@@ -1,0 +1,14 @@
+[
+    {
+      "_id": 1,
+      "name": "Apple",
+      "city": "Cupertino",
+      "phone": "1-800-275-2273"
+    },
+    {
+      "_id": 2,
+      "name": "Samsung",
+      "city": "Seoul",
+      "phone": "+82-2-2053-3000"
+    }
+  ]

@@ -1,0 +1,91 @@
+#   1. What is a NoSQL Database, and explain the types of NoSQL database?
+Ans : It stands for Not a Structured Query Language. diverge from traditional relational databases by storing data in an unstructured format.
+    NoSQL will store data in form of objects. and it is flexible , their are 4 main NoSQL databases.
+    A -> Document Database : This type of database is designed to store and query JSON, XML, BSON, etc., documents. 
+        In the documents data stores in key-value pair.
+        A document stores information about one object and its related data.
+    B -> Key-value Databases : These are the simplest types of NoSQL databases. Every item is stored in the database in a key-value pair. 
+        We can think of it as a table with exactly two columns. The first column contains a unique key. The second column is the value for each key. 
+        The values can be in different data types, such as integer, string, and float, or more complex data types, such as image and document.
+    C -> Wide-column Databases : column-oriented databases are used to store data as a collection of columns, where each column is treated separately, 
+        and the implementation logic is based on Google Big Table paper. They are mostly used for analytical workloads such as business intelligence, 
+        data warehouse management, and customer relationship management.
+    D -> Graph/node Databases : Graph databases are used to store, map and search relationships between nodes through edges. 
+        A node represents a data element, also called an object or entity. Each node has an incoming or outcoming edge. 
+        An edge represents the relationship between two nodes. Those edges contain some properties corresponding to the nodes they connect.
+
+#   2. What is the difference between SQL and NoSQL databases? 
+Ans :A -> Relational vs. Non-Relational:
+        SQL: Relational databases use SQL and store data in structured tables with predefined schemas. They focus on data relationships and are suitable for structured data.
+        NoSQL: Non-relational databases allow more flexible data structures. They don’t rely on fixed schemas and can handle unstructured or semi-structured data.
+    B -> Schema:
+        SQL: Has a predefined schema (tables, columns, relationships) that must be defined before data insertion.
+        NoSQL: Employs dynamic schemas, adapting to data changes without strict pre-defined structures.
+    C -> Scalability:
+        SQL: Typically scales vertically (adding resources to a single server). Horizontal scaling (sharding) is less common.
+        NoSQL: Excels at horizontal scalability, distributing data across multiple servers for better performance.
+    D -> Data Types:
+        SQL: Best for structured data (e.g., financial records, customer details).
+        NoSQL: Suited for unstructured or semi-structured data (e.g., JSON, XML, documents, graphs).
+    E -> Transactions:
+        SQL: Supports multi-row transactions (ACID properties).
+        NoSQL: Prioritizes availability and partition tolerance over strict consistency (CAP theorem).
+
+#   3. How to choose between MongoDB and MySQL based on your requirements?
+Ans:  
+    MySQL is a traditional SQL database that is widely used in web applications. It is reliable and has a large community of developers and users. However,  MySQL is not as scalable as MongoDB. MongoDB is a document-oriented database that is designed for scalability. It stores data in JSON-like documents, making it easy to scale out to multiple nodes. MongoDB also has a powerful query language called MongoDB Query Language (MQL), which makes it easy to find data stored in documents.
+
+#   4. What are collections and documents in a MongoDB database?
+Ans: 
+    A -> Documents : Each object in which the data is stored is called document. it is a fundamental unit of data in MongoDB, They’re similar to rows in a table but more flexible Each document is a JSON-like object (key-value pairs)
+    B -> Collections : Group of similar Documents.They group related documents together. Each collection can have a different schema or structure
+
+#   5. What is BSON? What is the difference between BSON and JSON?
+Ans: 
+    BSON is a binary-encoded format used primarily in MongoDB.It is not human-readable due to its binary nature. JSON is a lightweight, text-based data interchange format. It is human-readable, making it easy to read and write.
+
+#   6. What are MongoDB Compass and MongoDB Shell used for?
+Ans :
+    MongoDB Compass is typically used by developers, administrators, and data analysts who prefer a visual approach to database management and exploration. It's especially useful for those who are less comfortable with command-line interfaces or for tasks that benefit from visual data representation.
+
+    MongoDB Shell (mongo) is indispensable for administrators, developers, and power users who need fine-grained control over their MongoDB databases. It's used for scripting, debugging, performance tuning, and advanced querying where the flexibility and direct control offered by a command-line interface are advantageous.
+
+#   7.How to create collections in MongoDB?
+Ans :  
+    first you need to create a Database using this command ( use databaseName) . after you will create collections using that command ( db.createCollection("your_collection_name") )
+
+#   8.What is the difference between insertMany and insertOne?
+Ans : 
+    Number of Documents: insertOne inserts a single document, whereas insertMany inserts multiple documents (an array of documents).
+    Performance: insertMany can be more efficient than calling insertOne multiple times due to reduced overhead in communication with the database.
+    Atomicity: Both methods ensure atomicity for each individual operation. Either all documents in insertMany are inserted, or none if an error occurs.
+    Return Value: insertOne returns an object with information about the inserted document. insertMany returns an object with information about the bulk operation, including the number of documents inserted.
+
+#   9.What is the difference between deleteOne and deleteMany?
+Ans :
+    Number of Documents: deleteOne deletes only the first document that matches the filter, whereas deleteMany deletes all documents that match the filter.
+    Performance: deleteMany can be more efficient than calling deleteOne multiple times due to reduced overhead in communication with the database.
+    Atomicity: Both methods ensure atomicity for each individual operation. Either the single document in deleteOne or all documents in deleteMany that match the filter are deleted, or none if an error occurs.
+    Return Value: Both methods return an object with information about the deletion operation, including the number of documents deleted (deletedCount).
+
+#   10.How to read data in MongoDB? What is the difference between find and findOne?
+Ans : 
+    find retrieves multiple documents that match the query criteria and returns a cursor. You typically iterate over the cursor or use methods like toArray() to work with the results.
+    findOne retrieves a single document that matches the query criteria and returns that document as an object. It's useful when you expect only one matching document or want to retrieve the first document that matches the criteria.
+
+#   11.What is $set in MongoDB?
+Ans :
+    In MongoDB, $set is an update operator used within update operations to modify the value of fields in a document. It allows you to update specific fields or add new fields to a document without replacing the entire document.
+    When performing an update operation in MongoDB, $set is used to:
+      -  Update Existing Fields: Modify the value of one or more fields within a document.
+      -  Add New Fields: Insert new fields into a document if they do not already exist.
+
+#   12.How to filter data using MongoDB?
+Ans :
+    Filtering data in MongoDB involves querying collections to retrieve documents that match specific criteria. MongoDB uses a flexible query language that allows you to construct queries using various operators and expressions.
+    Basic Query Structure: The basic structure of a query in MongoDB is as follows:
+
+    db.collection('your_collection').find(query, projection)
+    db.collection('your_collection'): Specifies the collection in which to perform the query.
+    query: Specifies the selection criteria using MongoDB's query language.
+    projection (optional): Specifies which fields to include or exclude in the returned documents.

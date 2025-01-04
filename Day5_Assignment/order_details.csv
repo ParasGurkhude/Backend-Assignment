@@ -1,0 +1,20 @@
+[
+    {
+      "_id": 1,
+      "order_id": 1,
+      "product_id": 1,
+      "quantity": 1,
+      "price": 999.99,
+      "payment_id": 1,
+      "shipper_id": 1
+    },
+    {
+      "_id": 2,
+      "order_id": 2,
+      "product_id": 2,
+      "quantity": 1,
+      "price": 799.99,
+      "payment_id": 2,
+      "shipper_id": 2
+    }
+  ]

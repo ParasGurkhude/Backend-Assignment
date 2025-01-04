@@ -1,0 +1,22 @@
+[{
+      "_id": 1,
+      "name": "John Smith",
+      "email": "john@hotmail.com",
+      "address": {
+        "street": "123 Main St",
+        "city": "New York",
+        "state": "NY",
+        "zip": "10001"
+      }
+    },
+    {
+      "_id": 2,
+      "name": "Jane Doe",
+      "email": "jane@gmail.com",
+      "address": {
+        "street": "456 Oak St",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "90001"
+      }
+    }]

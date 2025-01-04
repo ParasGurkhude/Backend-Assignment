@@ -1,0 +1,39 @@
+1> Retrieve all the documents.
+-> db.users.find()
+
+2> Retrieve the first document.
+-> db.users.findOne()
+
+3> Update the age of the employee to 35 where the first_name is "Sidnee".
+-> db.users.updateOne({first_name:"Sidnee"}, {$set : {age:35}})
+
+4> Change the salary of "Meredeth Groveham" to 55000.
+-> db.users.updateOne({first_name:"Meredeth"}, {$set : {salary: 55000}})
+
+5> Update the last name of "Nikolaus" to "Park".
+-> db.users.updateOne({first_name:"Nikolaus"}, {$set : {last_name:"Park"}})
+
+6> Update the salary of all employees to 35000 where the age is 37.
+-> db.users.updateMany({age:37}, {$set : {salary:35000}})
+
+7> Update the last name of all the employees to "Jamme" where the age is 28.
+-> db.users.updateMany({age:28}, {$set : {last_name:"jamme"}})
+
+8> For all employees named "Kimbra", add a new field middle_name with the value "Marie".
+-> db.users.updateMany({first_name: "Kimbra"}, {$set: {middle_name: "Marie"}})
+
+9> Find all users who are 33 years old.
+-> db.users.find({age:33})
+
+10> Retrieve documents for users with a salary greater than 50000.
+-> db.users.find({ salary: { $gt: 50000 } })
+
+11> Find all the users where the gender is Female and age is 79.
+-> db.users.find({$and: [{ gender: "Female" },{ age: 79 }]})
+
+
+12> Find all the employees where the first_name is "George" and gender is Male.
+-> db.users.find({$and: [{ first_name: "George"}, {gender: "Male" }]})
+
+13> Find all users whose salary is less than or equal to 50000.
+-> db.users.find({salary: {$lte : 50000}})

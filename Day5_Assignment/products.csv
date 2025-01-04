@@ -1,0 +1,18 @@
+[
+    {
+      "_id": 1,
+      "name": "iPhone 13",
+      "category_id": 1,
+      "price": 999.99,
+      "quantity": 50,
+      "supplier_id": 1
+    },
+    {
+      "_id": 2,
+      "name": "Samsung Galaxy S21",
+      "category_id": 1,
+      "price": 799.99,
+      "quantity": 100,
+      "supplier_id": 2
+    }
+  ]

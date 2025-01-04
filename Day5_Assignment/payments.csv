@@ -1,0 +1,18 @@
+[
+    {
+      "_id": 1,
+      "payment_date": "2022-03-01",
+      "amount": 50.25,
+      "orderdtl_id": 1,
+      "paymentMethod": "UPI",
+      "paymentstatus": "success"
+    },
+    {
+      "_id": 2,
+      "payment_date": "2022-04-01",
+      "amount": 1120.00,
+      "orderdtl_id": 2,
+      "paymentMethod": "Debit Card",
+      "paymentstatus": "pending"
+    }
+  ]
